@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "yokka",
+  "displayName": "Yokka",
+  "version": "0.1.0",
+  "description": "Work your Yokka board from Claude Code: the Yokka MCP connection, the card work loop as a skill, commands for the next card, planning and board status, and a check before each turn ends.",
+  "author": { "name": "Yokka", "url": "https://yokka.ai" },
+  "homepage": "https://yokka.ai/docs/mcp/plugin/",
+  "repository": "https://github.com/yokka-ai/plugins",
+  "license": "MIT",
+  "keywords": ["kanban", "project-board", "mcp", "agents", "tasks"],
+  "userConfig": {
+    "token": {
+      "type": "string",
+      "title": "Yokka token",
+      "description": "Your workspace token (yk_…), from the connect screen or Workspace settings → Agent access.",
+      "sensitive": true,
+      "required": true
+    },
+    "server_url": {
+      "type": "string",
+      "title": "MCP server URL",
+      "description": "Where Yokka's MCP server runs. Leave it as it is unless the connect screen shows another address.",
+      "default": "https://api.yokka.ai/mcp"
+    }
+  },
+  "mcpServers": {
+    "yokka": {
+      "type": "http",
+      "url": "${user_config.server_url}",
+      "headers": { "Authorization": "Bearer ${user_config.token}" }
+    }
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "mcp_tool",
+            "server": "plugin:yokka:yokka",
+            "tool": "stop_check",
+            "input": { "stop_hook_active": "${stop_hook_active}" },
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}

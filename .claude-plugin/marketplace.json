@@ -1,0 +1,14 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "yokka",
+  "description": "Yokka's plugins: work your Yokka board from your coding agent.",
+  "owner": { "name": "Yokka", "url": "https://yokka.ai" },
+  "plugins": [
+    {
+      "name": "yokka",
+      "description": "The Yokka MCP connection, the card work loop as a skill, commands for the next card, planning and board status, and a check before each turn ends.",
+      "source": "./yokka",
+      "category": "productivity"
+    }
+  ]
+}

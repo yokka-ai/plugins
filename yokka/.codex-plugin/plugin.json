@@ -1,0 +1,28 @@
+{
+  "name": "yokka",
+  "version": "0.1.0",
+  "description": "Work your Yokka board from Codex: the card work loop as a skill, plus skills for the next card, planning and board status. Connect the Yokka MCP server with `codex mcp add` first.",
+  "author": { "name": "Yokka", "url": "https://yokka.ai" },
+  "homepage": "https://yokka.ai/docs/mcp/plugin/",
+  "repository": "https://github.com/yokka-ai/plugins",
+  "license": "MIT",
+  "keywords": ["kanban", "project-board", "mcp", "agents", "tasks"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Yokka",
+    "shortDescription": "Work your Yokka board's cards",
+    "longDescription": "Claim a card, read its brief, plan a checklist, report progress, ask when blocked and complete it, the way Yokka's board expects. Needs the Yokka MCP server connected.",
+    "developerName": "Yokka",
+    "category": "Productivity",
+    "capabilities": ["Instructions"],
+    "websiteURL": "https://yokka.ai",
+    "defaultPrompt": [
+      "Pick up the next card on my Yokka board.",
+      "Plan this feature into Yokka cards.",
+      "What's happening on my Yokka board?"
+    ],
+    "brandColor": "#7044EB",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/icon.svg"
+  }
+}
