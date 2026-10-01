@@ -7,7 +7,7 @@ The `yokka` plugin works in Claude Code and in Codex. Docs: <https://yokka.ai/do
 
 ## Claude Code
 
-Get your token from Yokka's connect screen (or **Workspace settings → Agent access**), then:
+Get your token from Yokka's connect screen (or **Workspace settings → Agents**), then:
 
 ```bash
 claude plugin marketplace add yokka-ai/plugins
@@ -37,6 +37,13 @@ codex mcp add yokka --url <your private link>
 codex plugin marketplace add yokka-ai/plugins
 codex plugin add yokka@yokka
 ```
+
+## Next
+
+- Run `/yokka:setup-repo` in each repo you work in. It adds a short section to `AGENTS.md` or `CLAUDE.md` naming
+  the repo's Yokka project, so every session there checks the board first.
+- To start Claude Code or Codex from a card's **Start** button, on the board or your phone, install the runner:
+  [yokka-ai/runner](https://github.com/yokka-ai/runner).
 
 ## Layout
 

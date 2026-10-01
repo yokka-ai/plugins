@@ -13,7 +13,7 @@
     "token": {
       "type": "string",
       "title": "Yokka token",
-      "description": "Your workspace token (yk_…), from the connect screen or Workspace settings → Agent access.",
+      "description": "Your workspace token (yk_…), from the connect screen or Workspace settings → Agents.",
       "sensitive": true,
       "required": true
     },

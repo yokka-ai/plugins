@@ -38,7 +38,8 @@ aren't available, say so and stop: don't do the work off the board.
    - `report_progress` at real milestones, one short line each. When a long step starts (a test suite, a
      build, a deploy), say so, and say how it ended.
    - Any call keeps your claim alive; it lapses after the project's stale time without one (30 minutes by
-     default), so report during long steps.
+     default), and the board releases the card at twice that. You can't feel time pass, so report at least
+     every 15 minutes (half the stale time the claim names), even in the middle of a long stretch of work.
    - Handing part of the card to a subagent? Give it a short name, have it claim with that name as `as`, and
      have it call `check_items` and `report_progress` on the card itself.
 5. **Ask** with `request_input` when you're blocked on a decision only the human can make, so the question
