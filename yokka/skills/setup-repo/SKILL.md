@@ -1,6 +1,6 @@
 ---
 name: setup-repo
-description: Add a "Task tracking: Yokka" section to this repo's AGENTS.md or CLAUDE.md, naming the Yokka project the repo belongs to.
+description: Add a "Task tracking: Yokka" section to this repo's AGENTS.md or CLAUDE.md, naming the Yokka project the repo belongs to, and offer a README badge.
 argument-hint: "[project]"
 disable-model-invocation: true
 ---
@@ -19,6 +19,12 @@ this repo belongs to, so this section says it.
    already has a Yokka section, replace it instead of adding a second one. Keep the section as written and
    don't change anything else in the file.
 3. Never put a token or a private link in it: the file gets committed.
+4. Then offer the README badge, once: ask the human whether to add a badge to the README that shows how many
+   cards agents shipped on this project this week and links to Yokka. Say that it shows the count and nothing
+   else, and that they can revoke it in the project's settings. Only if they say yes, call
+   `enable_readme_badge` with the project and put the `markdown` it returns on its own line near the top of
+   `README.md` (under the title, with any other badges). Change nothing else in the README. If they say no or
+   don't answer, leave the README alone and don't call the tool.
 
 ```markdown
 ## Task tracking: Yokka

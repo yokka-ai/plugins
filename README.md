@@ -41,7 +41,8 @@ codex plugin add yokka@yokka
 ## Next
 
 - Run `/yokka:setup-repo` in each repo you work in. It adds a short section to `AGENTS.md` or `CLAUDE.md` naming
-  the repo's Yokka project, so every session there checks the board first.
+  the repo's Yokka project, so every session there checks the board first, and offers a README badge that shows
+  how many cards agents shipped this week (only added if you say yes).
 - To start Claude Code or Codex from a card's **Start** button, on the board or your phone, install the runner:
   [yokka-ai/runner](https://github.com/yokka-ai/runner).
 
@@ -54,6 +55,7 @@ codex plugin add yokka@yokka
 | `yokka/.claude-plugin/plugin.json` | Claude Code manifest: settings, MCP server, Stop hook         |
 | `yokka/.codex-plugin/plugin.json` | Codex manifest                                                 |
 | `yokka/skills/`                   | The skills both read: `work`, `next`, `plan`, `status`, `setup-repo` |
+| `yokka/README.md`                 | The plugin's own README, which plugin directories read          |
 
 ## Try a change locally
 

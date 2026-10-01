@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "yokka",
   "displayName": "Yokka",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Work your Yokka board from Claude Code: the Yokka MCP connection, the card work loop as a skill, commands for the next card, planning and board status, and a check before each turn ends.",
   "author": { "name": "Yokka", "url": "https://yokka.ai" },
   "homepage": "https://yokka.ai/docs/mcp/plugin/",
